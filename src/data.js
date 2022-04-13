@@ -1,4 +1,4 @@
-export default [
+const data = [
   {
     id: 1,
     title: "Skógafoss",
@@ -66,3 +66,5 @@ export default [
     imageUrl: "https://source.unsplash.com/73FnCOHiUng",
   },
 ];
+
+export default data;
