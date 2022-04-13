@@ -1,30 +1,35 @@
 import React from "react";
+import { scryRenderedComponentsWithType } from "react-dom/test-utils";
 import "../styles/Card.css";
 
-export default function Card() {
+export default function Card(props) {
+  console.log(props);
   return (
     <div className="Card">
       <div className="card-content">
         <div className="card-image">
-          <img src="https://source.unsplash.com/WLxQvbMyfas" alt="Mount Fuji" />
+          <img src={props.data.imageUrl} alt="{props.data.title}" />
         </div>
         <div className="card-stats">
           <span className="card-location">
             <img src="../images/location.png" alt="location pin" />
-            Japan
+            {props.data.location}
           </span>
           <span>
-            <a href="#" target="_blank" rel="noreferrer" className="card-link">
+            <a
+              href={props.data.googleMapsUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="card-link"
+            >
               View on Google Maps
             </a>
           </span>
-          <h2 className="card-header">Mount Fuji</h2>
-          <p className="card-dates">12 Jan, 2021 - 24 Jan, 2021</p>
-          <p className="card-description">
-            Mount Fuji is the tallest mountain in Japan, standing at 3,776
-            meters (12,380 feet). Mount Fuji is the single most popular tourist
-            site in Japan, for both Japanese and foreign tourists.
+          <h2 className="card-header">{props.data.title}</h2>
+          <p className="card-dates">
+            {props.data.startDate} - {props.data.endDate}
           </p>
+          <p className="card-description">{props.data.description}</p>
         </div>
       </div>
       <hr />
