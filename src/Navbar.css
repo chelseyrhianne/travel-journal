@@ -1,0 +1,21 @@
+.Navbar {
+  background-color: #f55a5a;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+}
+
+.logo {
+  max-width: 24px;
+  max-height: 24px;
+}
+
+h1 {
+  font-size: 15px;
+  font-weight: 400;
+  padding-left: 6px;
+  letter-spacing: -1px;
+  line-height: 1.5;
+}
