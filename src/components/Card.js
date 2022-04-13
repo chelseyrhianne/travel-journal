@@ -1,5 +1,4 @@
 import React from "react";
-import { scryRenderedComponentsWithType } from "react-dom/test-utils";
 import "../styles/Card.css";
 
 export default function Card(props) {
